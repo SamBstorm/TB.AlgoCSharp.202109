@@ -56,3 +56,27 @@ DEBUT
     Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
 
 FIN
+
+-------------------VERSION 4----------------------
+Algorithme Exos 03 - Convertisseur secondes
+
+Variable temps, sec, min, heure, jour : Entier
+
+DEBUT
+    
+    Ecrire("Combien de secondes ?")
+    Lire(temps)                               // 90.001
+    min <- temps DIV 60                       // 1500
+    sec <- temps MOD 60                       // 1
+
+    heure <- min DIV 60                     // 25
+    min <- min MOD 60                       // 0
+    
+    jour <- heure DIV 24                    // 1
+    
+    heure <- heure MOD 24                   // 1
+
+
+    Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
+
+FIN
