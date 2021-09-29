@@ -1,0 +1,13 @@
+Algorithme Exos 01 - Inverser variables
+
+Variable nb1, nb2, temp : Entier
+
+DEBUT
+
+    nb1 <- 5
+    nb2 <- 7
+    temp <- nb1     //temp : 5 - nb1 : 5 - nb2 : 7
+    nb1 <- nb2      //temp : 5 - nb1 : 7 - nb2 : 7
+    nb2 <- temp     //temp : 5 - nb1 : 7 - nb2 : 7
+
+FIN
