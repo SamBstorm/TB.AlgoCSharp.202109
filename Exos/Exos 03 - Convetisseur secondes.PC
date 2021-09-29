@@ -1,0 +1,12 @@
+Algorithme Exos 03 - Convertisseur secondes
+
+Variable sec, min : Entier
+
+DEBUT
+    
+    Ecrire("Combien de secondes ?")
+    Lire(sec)                               // 135
+    min <- sec DIV 60                       // 2
+    sec <- sec MOD 60                       // 15
+    Ecrire("Cela fait {min} : {sec}")       // "Cela fait 2 : 15"
+FIN
