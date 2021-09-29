@@ -1,12 +1,58 @@
 Algorithme Exos 03 - Convertisseur secondes
 
-Variable sec, min : Entier
+Variable sec, min, heure, jour : Entier
 
 DEBUT
     
     Ecrire("Combien de secondes ?")
-    Lire(sec)                               // 135
-    min <- sec DIV 60                       // 2
-    sec <- sec MOD 60                       // 15
-    Ecrire("Cela fait {min} : {sec}")       // "Cela fait 2 : 15"
+    Lire(sec)                               // 90.001
+    jour <- sec DIV 86400                   // 1
+    sec <- sec MOD 86400                    // 3601
+    heure <- sec DIV 3600                   // 1
+    sec <- sec MOD 3600                     // 1
+    min <- sec DIV 60                       // 0
+    sec <- sec MOD 60                       // 1
+    Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
+
+FIN
+
+-------------------VERSION 2----------------------
+Algorithme Exos 03 - Convertisseur secondes
+
+Variable sec, min, heure, jour : Entier
+
+DEBUT
+    
+    Ecrire("Combien de secondes ?")
+    Lire(sec)                               // 90.001
+    jour <- sec DIV 86400                   // 1
+    heure <- (sec MOD 86400) DIV 3600       // 1
+    min <- (sec MOD 3600) DIV 60            // 0
+    sec <- sec MOD 60                       // 1
+    Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
+
+FIN
+
+-------------------VERSION 3----------------------
+Algorithme Exos 03 - Convertisseur secondes
+
+Variable sec, min, heure, jour : Entier
+
+DEBUT
+    
+    Ecrire("Combien de secondes ?")
+    Lire(sec)                               // 90.001
+    min <- sec DIV 60                       // 1500
+    sec <- sec MOD 60                       // 1
+
+    heure <- min DIV 60                     // 25
+    min <- min MOD 60                       // 0
+    
+    jour <- heure DIV 24                    // 1
+    
+    heure <- heure MOD 24                   // 1
+
+
+    Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
+
 FIN
