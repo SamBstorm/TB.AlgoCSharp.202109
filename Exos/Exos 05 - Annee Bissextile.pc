@@ -1,0 +1,55 @@
+Algorithme Exos 05 - Annee Bissextile
+
+Variable annee : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez indiquer l'année à analyser : ")
+    Lire(annee)
+    SI ((annee MOD 4 == 0) ET (annee MOD 100 != 0)) OU (annee MOD 400 == 0) ALORS
+        Ecrire("{annee} est une année bissextile")
+    SINON
+        Ecrire("{annee} n'est pas une année bissextile")
+    FINSI
+
+FIN
+
+---------------------VERSION 2----------------------
+Algorithme Exos 05 - Annee Bissextile
+
+Variable annee : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez indiquer l'année à analyser : ")
+    Lire(annee)
+    SI ((annee MOD 4 == 0) ET (annee MOD 100 != 0)) ALORS
+        Ecrire("{annee} est une année bissextile")
+    SINONSI (annee MOD 400 == 0) ALORS
+        Ecrire("{annee} est une année bissextile")
+    SINON
+        Ecrire("{annee} n'est pas une année bissextile")
+    FINSI
+
+FIN
+
+---------------------VERSION 3----------------------
+Algorithme Exos 05 - Annee Bissextile
+
+Variable annee : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez indiquer l'année à analyser : ")
+    Lire(annee)
+    SI (annee MOD 4 == 0) ALORS
+        SI (annee MOD 100 != 0) ALORS
+            Ecrire("{annee} est une année bissextile")
+        FINSI
+    SINONSI (annee MOD 400 == 0) ALORS
+        Ecrire("{annee} est une année bissextile")
+    SINON
+        Ecrire("{annee} n'est pas une année bissextile")
+    FINSI
+
+FIN
