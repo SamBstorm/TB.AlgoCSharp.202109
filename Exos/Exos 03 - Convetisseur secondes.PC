@@ -19,16 +19,19 @@ FIN
 -------------------VERSION 2----------------------
 Algorithme Exos 03 - Convertisseur secondes
 
+Constante   MINUTE = 60,
+            HEURE = 3600,
+            JOUR = 86400
 Variable sec, min, heure, jour : Entier
 
 DEBUT
     
     Ecrire("Combien de secondes ?")
     Lire(sec)                               // 90.001
-    jour <- sec DIV 86400                   // 1
-    heure <- (sec MOD 86400) DIV 3600       // 1
-    min <- (sec MOD 3600) DIV 60            // 0
-    sec <- sec MOD 60                       // 1
+    jour <- sec DIV JOUR                   // 1
+    heure <- (sec MOD JOUR) DIV HEURE       // 1
+    min <- (sec MOD HEURE) DIV MINUTE            // 0
+    sec <- sec MOD MINUTE                       // 1
     Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
 
 FIN
@@ -77,6 +80,6 @@ DEBUT
     heure <- heure MOD 24                   // 1
 
 
-    Ecrire("Cela fait {jour} jour(s) {heure} : {min} : {sec}")
+    Ecrire("{temps} secondes fait {jour} jour(s) {heure} : {min} : {sec}")
 
 FIN
