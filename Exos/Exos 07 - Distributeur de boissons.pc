@@ -1,0 +1,88 @@
+Demander à l'utilisateur quel boisson il veut (un numéro)
+    Vérifier le numéro
+        Si le numéro existe:
+            Vérifier le stock
+                Si il y a du stock :
+                    Distribuer la boisson
+                    DIminuer le stock
+                Sinon : prévenir plus en stock
+        Sinon : prévenir numéro incorrect
+Remercier le client
+
+Algorithme Exos 07 - Distributeur de boissons
+
+Variable stock1, stock2, stock3, choix : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez faire un choix :")
+    Lire(choix)
+    SI choix == 1 ALORS
+        Lire(stock1)                //Capteur de pesage donne le nombre de boisson
+        SI stock1 > 0 ALORS
+            Distribuer()            //Fonction à écrire plus tard
+            stock1 <- stock1 - 1
+        SINON
+            Ecrire("Sold out...")
+        FINSI
+    SINONSI choix == 2 ALORS
+        Lire(stock2)                //Capteur de pesage donne le nombre de boisson
+        SI stock2 > 0 ALORS
+            Distribuer()            //Fonction à écrire plus tard
+            stock2 <- stock2 - 1
+        SINON
+            Ecrire("Sold out...")
+        FINSI
+    SINONSI choix == 3 ALORS
+        Lire(stock3)                //Capteur de pesage donne le nombre de boisson
+        SI stock3 > 0 ALORS
+            Distribuer()            //Fonction à écrire plus tard
+            stock3 <- stock3 - 1
+        SINON
+            Ecrire("Sold out...")
+        FINSI
+    SINON
+        Ecrire("Le choix {choix} n'est pas disponible.")
+    FINSI
+    Ecrire("Merci d'avoir utiliser distributeur 3000!")
+
+FIN
+
+
+----------------------VERSION SELONQUE-------------------
+
+Algorithme Exos 07 - Distributeur de boissons
+
+Variable stock1, stock2, stock3, choix : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez faire un choix :")
+    Lire(choix)
+    SELONQUE choix VAUT
+        1 : Lire(stock1)                //Capteur de pesage donne le nombre de boisson
+            SI stock1 > 0 ALORS
+                Distribuer()            //Fonction à écrire plus tard
+                stock1 <- stock1 - 1
+            SINON
+                Ecrire("Sold out...")
+            FINSI
+        2 : Lire(stock2)                //Capteur de pesage donne le nombre de boisson
+            SI stock2 > 0 ALORS
+                Distribuer()            //Fonction à écrire plus tard
+                stock2 <- stock2 - 1
+            SINON
+                Ecrire("Sold out...")
+            FINSI
+        3 : Lire(stock3)                //Capteur de pesage donne le nombre de boisson
+            SI stock3 > 0 ALORS
+                Distribuer()            //Fonction à écrire plus tard
+                stock3 <- stock3 - 1
+            SINON
+                Ecrire("Sold out...")
+            FINSI
+        SINON : Ecrire("Le choix {choix} n'est pas disponible.")
+    FINSQ
+    Ecrire("Merci d'avoir utiliser distributeur 3000!")
+
+FIN
