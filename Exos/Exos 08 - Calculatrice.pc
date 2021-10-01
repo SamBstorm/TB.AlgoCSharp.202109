@@ -1,0 +1,79 @@
+1. l'utilisateur entre un nombre
+2. l'utilisateur entre un opérateur (+ - / *)
+3. Vérifier si opérateur valide
+    Si valide : a. Entrer le second nombre
+                b. Donne le résultat selon l'opérateur
+    Sinon signaler l'erreur
+
+
+
+Algorithme Exos 08 - Calculatrice
+
+Variable nombre1, nombre2, resultat : Reel
+Variable operateur : Chaine
+
+DEBUT
+    
+    Ecrire("Permier nombre :")
+    Lire(nombre1)
+    Ecrire("Opérateur :")
+    Lire(operateur)
+    SI operateur == "+" ALORS
+        Ecrire("Second nombre :")
+        Lire(nombre2)
+        resultat <- nombre1 + nombre2
+        Ecrire("{nombre1} {operateur} {nombre2} = {resultat}")
+    SINONSI operateur == "-" ALORS
+        Ecrire("Second nombre :")
+        Lire(nombre2)
+        resultat <- nombre1 - nombre2
+        Ecrire("{nombre1} {operateur} {nombre2} = {resultat}")
+    SINONSI operateur == "*" ALORS
+        Ecrire("Second nombre :")
+        Lire(nombre2)
+        resultat <- nombre1 * nombre2
+        Ecrire("{nombre1} {operateur} {nombre2} = {resultat}")
+    SINONSI operateur == "/" ALORS
+        Ecrire("Second nombre :")
+        Lire(nombre2)
+        SI nombre2 != 0 ALORS
+            resultat <- nombre1 / nombre2
+            Ecrire("{nombre1} {operateur} {nombre2} = {resultat}")
+        SINON
+            Ecrire("Division impossible")
+        FINSI
+    FINSI
+FIN
+
+-------------------VERSION 2-------------------
+Algorithme Exos 08 - Calculatrice
+
+Variable nombre1, nombre2 : Reel
+Variable operateur, resultat : Chaine
+
+DEBUT
+    
+    Ecrire("Permier nombre :")
+    Lire(nombre1)
+    Ecrire("Opérateur :")
+    Lire(operateur)
+    SI operateur == "+" OU operateur == "-" OU operateur == "*" OU operateur == "/" ALORS
+        Ecrire("Second nombre :")
+        Lire(nombre2)
+        resultat <- "{nombre1} {operateur} {nombre2} = "
+        SELONQUE operateur VAUT
+            "+" :   resultat <- resultat + "{nombre1 + nombre2}"
+            "-" :   resultat <- resultat + "{nombre1 - nombre2}"
+            "*" :   resultat <- resultat + "{nombre1 * nombre2}"
+            "/" :   SI nombre2 == 0 ALORS
+                        resultat <- "Division impossible"
+                    SINON
+                        resultat <- resultat + (nombre1 / nombre2)
+                    FINSI
+        FINSQ
+    SINON 
+        resultat <- "Opération invalide"
+    FINSI
+    Ecrire(resultat)
+FIN
+
