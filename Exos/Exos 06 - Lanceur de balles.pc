@@ -1,0 +1,42 @@
+Algorithme Exos 06 - Lanceur de balles
+
+Variable panierVide, pret : Booleen
+
+DEBUT
+    
+    Ecrire("Veuillez patienter, nous vérifions l'état du panier...")
+    Lire(panierVide)    //Reçoit du booléen, grâce à un capteur de pesage
+    SI panierVide ALORS
+        Ecrire("Veuillez remplir le panier")            //Message sonore
+    SINON
+        Ecrire("Êtes-vous prêt ?")                      //Message sonore
+        Lire(pret)      //Reçoit du booléen, grâce à une commande vocale
+        SI pret ALORS
+            Ecrire("Attention en voilà une rapide!")    //Message sonore
+            lancerBalle()                               //Fonction à écrire plus tard
+        SINON
+            Ecrire("Dépèche d'autres attendent...")     //Message sonore
+        FINSI
+    FINSI
+    
+FIN
+
+
+------------COMMENT RÉCUPÉRER UN BOOLÉEN AVEC D'AUTRES TYPES------------------ 
+-----On converti les types grâce aux opérateurs de comparaisons : == , != , > , < , >= , <=
+-----EN PSEUDOCODE :
+
+Variable reponse : Chaine
+Variable pret : Booleen
+
+Lire(reponse)
+
+pret <- reponse == "oui"
+
+-----EN C#
+
+string reponse;
+bool pret;
+
+reponse = Console.ReadLine();
+pret = reponse == "oui";
