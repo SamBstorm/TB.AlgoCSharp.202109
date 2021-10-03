@@ -1,0 +1,32 @@
+
+Qu'est ce que je dois répéter?
+
+    Ecrire(nombre + " x " + MULTIPLICATEUR + " = " + (nombre * MULTIPLICATEUR)) //1 x 2 = 2
+    nombre <- nombre + 1
+
+Pourquoi je dois le répéter?
+
+    Pour afficher la table de 2 allant de 1 à 10
+
+Quand est-ce que j'arrête la répétition?
+
+    Quand nombre sera > 10
+
+
+
+
+Algorithme Exos 09 - Table de 2
+
+Variable nombre : Entier
+Constante MULTIPLICATEUR = 2
+
+DEBUT
+    
+    nombre <- 1
+    TANTQUE nombre <= 10 FAIRE
+        Ecrire(nombre + " x " + MULTIPLICATEUR + " = " + (nombre * MULTIPLICATEUR))
+        nombre <- nombre + 1
+    FINTQ
+    
+
+FIN
