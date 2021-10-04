@@ -1,0 +1,46 @@
+Algorithme Exos 10 - Lanceur de balles V2
+
+Variable pret : Booleen
+Variable panierStock : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez patienter, nous vérifions l'état du panier...")
+    Lire(panierStock)    //Reçoit un nombre entier correspondant au nombre de balles dans le panier, grâce à un capteur de pesage
+    TANTQUE panierStock > 0 FAIRE
+        Ecrire("Êtes-vous prêt ?")                      //Message sonore
+        Lire(pret)      //Reçoit du booléen, grâce à une commande vocale
+        SI pret ALORS
+            Ecrire("Attention en voilà une rapide!")    //Message sonore
+            lancerBalle()                               //Fonction à écrire plus tard
+            panierStock <- panierStock - 1              //Diminution du stock de balles
+        FINSI
+    FINTQ
+    Ecrire("Veuillez remplir le panier")            //Message sonore
+FIN
+
+------------------------------VERSION 2----------------------
+
+Algorithme Exos 10 - Lanceur de balles V2
+
+Variable pret : Booleen
+Variable panierStock : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez patienter, nous vérifions l'état du panier...")
+    Lire(panierStock)    //Reçoit un nombre entier correspondant au nombre de balles dans le panier, grâce à un capteur de pesage
+    TANTQUE panierStock > 0 FAIRE
+        Ecrire("Êtes-vous prêt ?")                      //Message sonore
+        Lire(pret)      //Reçoit du booléen, grâce à une commande vocale
+        TANTQUE NON(pret) FAIRE
+            Ecrire("Nous t'attendons")
+            Ecrire("Êtes-vous prêt ?")                      //Message sonore
+            Lire(pret)      //Reçoit du booléen, grâce à une commande vocale
+        FINTQ        
+        Ecrire("Attention en voilà une rapide!")    //Message sonore
+        lancerBalle()                               //Fonction à écrire plus tard
+        panierStock <- panierStock - 1              //Diminution du stock de balles
+    FINTQ
+    Ecrire("Veuillez remplir le panier")            //Message sonore
+FIN

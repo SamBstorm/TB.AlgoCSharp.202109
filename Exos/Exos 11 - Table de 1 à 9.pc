@@ -1,0 +1,17 @@
+Algorithme Exos 11 - Table de 1 à 9
+
+Variable nombre, multiplicateur : Entier
+
+DEBUT
+    
+    multiplicateur <- 1
+    TANTQUE multiplicateur <= 9 FAIRE
+        nombre <- 1
+        TANTQUE nombre <= 10 FAIRE
+            Ecrire(nombre + " x " + multiplicateur + " = " + (nombre * multiplicateur))
+            nombre <- nombre + 1
+        FINTQ
+        multiplicateur <- multiplicateur + 1
+    FINTQ
+
+FIN
