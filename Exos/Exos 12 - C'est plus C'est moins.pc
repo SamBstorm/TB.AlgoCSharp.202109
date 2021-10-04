@@ -1,0 +1,22 @@
+Algorithme Exos 12 - C'est plus C'est moins
+
+Variable devine, proposition : Entier
+
+DEBUT
+    
+    Ecrire("Joueur 1 : Veuillez choisir un nombre (entre 1 et 10) :")
+    Lire(devine)
+    Ecrire("Joueur 2 : Veuillez deviner le nombre (entre 1 et 10) :")
+    Lire(proposition)
+    TANTQUE devine != proposition FAIRE
+        SI devine < proposition ALORS
+            Ecrire("C'est moins!")
+        SINON
+            Ecrire("C'est plus!")
+        FINSI
+        Ecrire("Joueur 2 : Veuillez deviner le nombre (entre 1 et 10) :")
+        Lire(proposition)
+    FINTQ
+    Ecrire("C'est gagné! C'est gagné! We did it! Yeah!")
+
+FIN
