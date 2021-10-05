@@ -1,0 +1,19 @@
+Algorithme Exos 15 - Exposant 10
+
+Constante EXPOSANT = 10
+Variable nombre, resultat : Reel
+Variable compteur : Entier
+
+DEBUT
+    
+    compteur <- 1
+    Ecrire("Veuillez introduire un nombre : ")
+    Lire(nombre)
+    resultat <- nombre
+    FAIRE
+        resultat <- resultat * nombre
+        compteur <- compteur + 1
+    TANTQUE compteur < EXPOSANT FINTQ
+    Ecrire("{nombre} exposant {EXPOSANT} donne {resultat}")
+    
+FIN
