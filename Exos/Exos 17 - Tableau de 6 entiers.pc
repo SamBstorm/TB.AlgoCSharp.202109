@@ -1,0 +1,23 @@
+Algorithme Exos 17 - Tableau de 6 entiers
+
+Constante TAILLE = 6
+Variable tab : Tableau[TAILLE] de Entier
+Variable index, nbElement : Entier
+
+DEBUT
+    
+    nbElement <- 0
+    TANTQUE nbElement < TAILLE FAIRE
+        Ecrire("Veuillez indiquer une valeur pour la case {nbElement + 1}: ")
+        Lire(tab[nbElement])
+        nbElement <- nbElement + 1
+    FINTQ
+    
+    index <- 0
+    TANTQUE index < nbElement FAIRE
+        Ecrire("La case {index + 1} vaut : {tab[index]}")
+        index <- index + 1
+    FINTQ
+    
+
+FIN
