@@ -1,0 +1,86 @@
+Algorithme Exos 13 - Distributeur de boissons V2
+
+Variable stock1, stock2, stock3, choix : Entier
+Variable redistribuer : Booleen
+
+DEBUT
+    FAIRE
+        Ecrire("Veuillez faire un choix :")
+        Lire(choix)
+        SELONQUE choix VAUT
+            1 : Lire(stock1)                //Capteur de pesage donne le nombre de boisson
+                SI stock1 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock1 <- stock1 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            2 : Lire(stock2)                //Capteur de pesage donne le nombre de boisson
+                SI stock2 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock2 <- stock2 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            3 : Lire(stock3)                //Capteur de pesage donne le nombre de boisson
+                SI stock3 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock3 <- stock3 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            SINON : Ecrire("Le choix {choix} n'est pas disponible.")
+        FINSQ
+        SI (stock1 > 0) OU (stock2 > 0) OU (stock3 > 0) ALORS       //(stock1 + stock2 + stock3) > 0 fonctionne aussi
+            Ecrire("Une autre boisson ?")
+            Lire(redistribuer)                  //Redistribuer obtient VRAI si l'utilisateur appuis sur Oui, et Faux si il appuies sur Non
+        SINON
+            redistribuer <- Faux
+        FINSI
+        
+        
+    TANTQUE redistribuer FINTQ
+    
+    
+    Ecrire("Merci d'avoir utiliser distributeur 3000!")
+
+FIN
+
+-----------------------------------------VERSION 2---------------------------------
+Algorithme Exos 13 - Distributeur de boissons V2
+
+Variable stock1, stock2, stock3, choix : Entier
+
+DEBUT
+    FAIRE
+        Ecrire("Veuillez faire un choix : (1) Soda | (2) Eau | (3) Orangeade | (4) Stop")
+        Lire(choix)
+        SELONQUE choix VAUT
+            1 : Lire(stock1)                //Capteur de pesage donne le nombre de boisson
+                SI stock1 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock1 <- stock1 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            2 : Lire(stock2)                //Capteur de pesage donne le nombre de boisson
+                SI stock2 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock2 <- stock2 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            3 : Lire(stock3)                //Capteur de pesage donne le nombre de boisson
+                SI stock3 > 0 ALORS
+                    Distribuer()            //Fonction à écrire plus tard
+                    stock3 <- stock3 - 1
+                SINON
+                    Ecrire("Sold out...")
+                FINSI
+            4 : Ecrire("Merci d'avoir utiliser distributeur 3000!")
+            SINON : Ecrire("Le choix {choix} n'est pas disponible.")
+        FINSQ
+        
+    TANTQUE choix != 4 ET (stock1 + stock2 + stock3) > 0 FINTQ
+
+FIN

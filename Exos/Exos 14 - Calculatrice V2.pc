@@ -1,0 +1,34 @@
+Algorithme Exos 14 - Calculatrice V2
+
+Variable nombre1, nombre2 : Reel
+Variable operateur, resultat : Chaine
+Variable recommencer : Booleen
+
+DEBUT
+    FAIRE
+        Ecrire("Permier nombre :")
+        Lire(nombre1)
+        Ecrire("Opérateur :")
+        Lire(operateur)
+        SI operateur == "+" OU operateur == "-" OU operateur == "*" OU operateur == "/" ALORS
+            Ecrire("Second nombre :")
+            Lire(nombre2)
+            resultat <- "{nombre1} {operateur} {nombre2} = "
+            SELONQUE operateur VAUT
+                "+" :   resultat <- resultat + "{nombre1 + nombre2}"
+                "-" :   resultat <- resultat + "{nombre1 - nombre2}"
+                "*" :   resultat <- resultat + "{nombre1 * nombre2}"
+                "/" :   SI nombre2 == 0 ALORS
+                            resultat <- "Division impossible"
+                        SINON
+                            resultat <- resultat + (nombre1 / nombre2)
+                        FINSI
+            FINSQ
+        SINON 
+            resultat <- "Opération invalide"
+        FINSI
+        Ecrire(resultat)
+        Ecrire("Voulez-vous encore effectuer un calcul ?")
+        Lire(recommencer)
+    TANTQUE recommencer FINTQ
+FIN
