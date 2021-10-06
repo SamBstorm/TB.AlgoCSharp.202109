@@ -1,0 +1,77 @@
+Algorithme Exos 19 - Tableau score
+
+Constante TAILLE = 10
+Variable tabScores : Tableau de Entier[TAILLE]
+Variable nbJoueurs, index : Entier
+Variable moyenne : Reel
+
+DEBUT
+    
+    FAIRE
+        Ecrire("Veuillez indiquer le nombre de joueurs (2 à {TAILLE} joueurs) :")
+        Lire(nbJoueurs)
+    TANTQUE nbJoueurs < 2 OU nbJoueurs > TAILLE FINTQ
+    
+    POUR index DE 0 À nbJoueurs-1 PAR 1 FAIRE
+        Ecrire("Veuillez indiquer le score du joueur {index + 1} :")
+        Lire(tabScores[index])
+    FINP
+
+    moyenne <- 0
+    POUR index DE 0 À nbJoueurs-1 PAR 1 FAIRE
+        moyenne <- moyenne + tabScores[index]
+    FINP
+    
+    Ecrire("La moyenne des scores de la partie est  {moyenne / nbJoueurs}")
+
+FIN
+
+--------------------VERSION 2-------------------------
+Algorithme Exos 19 - Tableau score
+
+Constante TAILLE = 10
+Variable tabScores : Tableau de Entier[TAILLE]
+Variable nbJoueurs, index : Entier
+Variable moyenne : Reel
+
+DEBUT
+    
+    FAIRE
+        Ecrire("Veuillez indiquer le nombre de joueurs (2 à {TAILLE} joueurs) :")
+        Lire(nbJoueurs)
+    TANTQUE nbJoueurs < 2 OU nbJoueurs > TAILLE FINTQ
+    
+    moyenne <- 0
+    POUR index DE 0 À nbJoueurs-1 PAR 1 FAIRE
+        Ecrire("Veuillez indiquer le score du joueur {index + 1} :")
+        Lire(tabScores[index])
+        moyenne <- moyenne + tabScores[index]
+    FINP
+    
+    Ecrire("La moyenne des scores de la partie est  {moyenne / nbJoueurs}")
+
+FIN
+--------------------VERSION SANS TABLEAU-------------------------
+Algorithme Exos 19 - Tableau score
+
+Constante TAILLE = 10
+Variable nbJoueurs, index, score : Entier
+Variable moyenne : Reel
+
+DEBUT
+    
+    FAIRE
+        Ecrire("Veuillez indiquer le nombre de joueurs (2 à {TAILLE} joueurs) :")
+        Lire(nbJoueurs)
+    TANTQUE nbJoueurs < 2 OU nbJoueurs > TAILLE FINTQ
+    
+    moyenne <- 0
+    POUR index DE 0 À nbJoueurs-1 PAR 1 FAIRE
+        Ecrire("Veuillez indiquer le score du joueur {index + 1} :")
+        Lire(score)
+        moyenne <- moyenne + score
+    FINP
+    
+    Ecrire("La moyenne des scores de la partie est  {moyenne / nbJoueurs}")
+
+FIN
