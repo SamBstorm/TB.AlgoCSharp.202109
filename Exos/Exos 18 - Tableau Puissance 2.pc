@@ -1,0 +1,24 @@
+Algorithme Exos 18 - Tableau Puissance 2
+
+Constante VALEURDEPART = 2
+Constante TAILLE = 10
+Variable tab : Tableau de Entier[TAILLE]
+Variable compteur, index : Entier
+
+DEBUT
+    compteur <- 0
+    tab[compteur]<-VALEURDEPART
+    compteur <- compteur + 1
+
+    TANTQUE compteur < TAILLE FAIRE
+        tab[compteur] <- tab[compteur-1] * VALEURDEPART
+        compteur <- compteur + 1
+    FINTQ
+    
+    index <- 0
+    TANTQUE index < compteur FAIRE
+        Ecrire(tab[index])
+        index <- index + 1
+    FINTQ
+    
+FIN
