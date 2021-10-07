@@ -1,0 +1,53 @@
+Algorithme Exos 22 - Fusion Tableaux
+
+Constante   TAILLE1 = 4, 
+            TAILLE2 = 3, 
+            TAILLE3 = TAILLE1 + TAILLE2
+Variable    tab1 : Tableau de Entier[TAILLE1],
+            tab2 : Tableau de Entier[TAILLE2],
+            tab3 : Tableau de Entier[TAILLE3]
+Variable index, index2, temp : Entier
+
+DEBUT
+    
+    POUR index DE 0 À TAILLE1 - 1 FAIRE
+        Lire(tab1[index])               //Fournit aléatoire
+    FINP
+
+    POUR index DE 0 À TAILLE2 - 1 FAIRE
+        Lire(tab2[index])               //Fournit aléatoire
+    FINP
+
+    Ecrire("Premier tableau :")
+    POUR index DE 0 À TAILLE1 - 1 FAIRE
+        Ecrire(tab1[index])
+    FINP
+
+    Ecrire("Second tableau :")
+    POUR index DE 0 À TAILLE2 - 1 FAIRE
+        Ecrire(tab2[index])
+    FINP
+    
+    POUR index DE 0 À TAILLE3 - 1 FAIRE
+        SI index < TAILLE1 ALORS
+            tab3[index] <- tab1[index]
+        SINON
+            tab3[index] <- tab2[index - TAILLE1]
+        FINSI
+        SI index > 0 ALORS
+            index2 <- index
+            TANTQUE tab3[index2] < tab3[index2 - 1] ET index2 > 0 FAIRE
+                temp <- tab3[index2]
+                tab3[index2] <- tab3[index2 - 1]
+                tab3[index2 - 1] <- temp
+                index2 <- index2 - 1
+            FINTQ
+        FINSI
+    FINP
+    
+    Ecrire("Tableaux fusionnés :")
+    POUR index DE 0 À TAILLE3 - 1 FAIRE
+        Ecrire(tab3[index])
+    FINP
+
+FIN
