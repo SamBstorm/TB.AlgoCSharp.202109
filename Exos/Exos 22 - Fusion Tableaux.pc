@@ -36,7 +36,7 @@ DEBUT
         FINSI
         SI index > 0 ALORS
             index2 <- index
-            TANTQUE tab3[index2] < tab3[index2 - 1] ET index2 > 0 FAIRE
+            TANTQUE index2 > 0 ET tab3[index2] < tab3[index2 - 1] FAIRE
                 temp <- tab3[index2]
                 tab3[index2] <- tab3[index2 - 1]
                 tab3[index2 - 1] <- temp
