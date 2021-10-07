@@ -1,0 +1,25 @@
+Algorithme Exos 20 - Inversion tableau
+
+Constante TAILLE = 7
+Variable tab : Tableau de Entier[TAILLE]
+Variable index, temp : Entier
+
+DEBUT
+    
+    POUR index DE 0 À TAILLE-1 FAIRE            // PAR 1, mais inutile de le préciser, c'est le pas par defaut
+        Ecrire("Veuillez introduire un nombre :")
+        Lire(tab[index])
+    FINP
+    
+    POUR index DE 0 À (TAILLE DIV 2) -1 FAIRE
+        temp <- tab[index]
+        tab[index] <- tab[TAILLE-1-index]
+        tab[TAILLE-1-index] <- temp
+    FINP
+    
+    POUR index DE 0 À TAILLE-1 FAIRE
+        Ecrire(tab[index])
+    FINP
+    
+
+FIN
