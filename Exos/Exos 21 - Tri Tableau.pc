@@ -1,0 +1,35 @@
+Algorithme Exos 21 - Tri Tableau
+
+Constante TAILLE = 7
+Variable tab : Tableau de Entier[TAILLE]
+Variable index, temp : Entier
+Variable echange : Booleen
+
+DEBUT
+    
+    POUR index DE 0 À TAILLE-1 FAIRE
+        Lire(tab[index])           //Fournir aléatoirement
+    FINP
+
+    POUR index DE 0 À TAILLE-1 FAIRE
+        Ecrire(tab[index])
+    FINP
+
+    FAIRE
+        echange <- Faux
+        POUR index DE 0 À TAILLE-2 FAIRE
+            SI tab[index] > tab[index +1] ALORS
+                temp <- tab[index]
+                tab[index] <- tab[index + 1]
+                tab[index + 1] <- temp
+                echange <- Vrai
+            FINSI
+        FINP
+    TANTQUE echange FINTQ
+
+    POUR index DE 0 À TAILLE-1 FAIRE
+        Ecrire(tab[index])
+    FINP
+    
+
+FIN
