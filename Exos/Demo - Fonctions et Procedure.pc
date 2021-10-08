@@ -1,0 +1,24 @@
+PROCEDURE DireBonjour(nom : Chaine)
+DEBUT
+    Ecrire("Bonjour "+ nom)
+FIN
+
+FONCTION Addition(nb1 : Entier, nb2 : Entier) : Entier
+
+Variable result : Entier
+
+DEBUT
+    result <- nb1 + nb2
+    RENVOIE result
+FIN
+
+
+Algorithme Demonstration
+
+//Déclarative
+
+DEBUT
+    
+    //Instructions
+
+FIN
