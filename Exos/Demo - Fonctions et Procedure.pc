@@ -15,10 +15,11 @@ FIN
 
 Algorithme Demonstration
 
-//Déclarative
+Variable number : Entier 
 
 DEBUT
     
-    //Instructions
+    number <- 1
+    number <- Addition(number, number)
 
 FIN
