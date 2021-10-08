@@ -1,0 +1,65 @@
+FONCTION RechercheTableau(tab : Tableau d'Entier, taille : Entier, valRecherche : Entier) : Entier
+
+Variable index, indexTrouve : Entier
+
+DEBUT
+    indexTrouve <- -1
+    index <- 0
+    TANTQUE index < taille && indexTrouve == -1 FAIRE
+        SI tab[index] == valRecherche ALORS
+            indexTrouve <- index
+        FINSI
+        index <- index + 1
+    FINTQ
+
+    RENVOIE indexTrouve
+FIN
+
+------------------------------------VERSION 2(Compatible C#)-------------------------------------
+
+FONCTION RechercheTableau(tab : Tableau d'Entier, taille : Entier, valRecherche : Entier) : Entier
+
+Variable index: Entier
+
+DEBUT
+    POUR index DE 0 A taille -1 FAIRE
+        SI tab[index] == valRecherche ALORS
+            RENVOIE index
+        FINSI
+    FINTQ
+
+    RENVOIE -1
+FIN
+
+
+Algorithme Exos 29 - Fonction recherche
+
+Constante TAILLE = 7
+Variable tab : Tableau de Entier[TAILLE]
+Variable index, valeur : Entier
+
+DEBUT
+    
+    POUR index DE 0 À TAILLE-1 FAIRE
+        Lire(tab[index])                //Données aléatoires
+    FINP
+
+    Ecrire("Veuillez indiquer la valeur recherchée :")
+    Lire(valeur)
+    
+    index <- RechercheTableau(tab, TAILLE, valeur)
+
+    SI index == - 1 ALORS
+        Ecrire("Pas de {valeur} dans le tableau aléatoire...")
+    SINON
+        Ecrire("La valeur {valeur} est en {index + 1} position du tableau.")
+    FINSI
+
+
+    //OU
+
+    tab <- [1,2,3]
+
+    Ecrire(RechercheTableau(tab, TAILLE, 1))
+
+FIN

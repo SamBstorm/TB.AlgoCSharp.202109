@@ -1,0 +1,21 @@
+FONCTION carre(nombre : Entier) : Entier
+
+DEBUT
+    RENVOIE nombre * nombre
+FIN
+
+
+
+Algorithme Exos 28 - Fonction carré
+
+Variable nb,result : Entier
+
+DEBUT
+    
+    nb <- 2
+    result <- carre(nb)
+
+    //OU
+
+    Ecrire(carre(2))
+FIN
