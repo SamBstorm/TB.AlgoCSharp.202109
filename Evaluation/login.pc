@@ -1,0 +1,32 @@
+Algorithme Login
+
+Variable email, password, checkEmail, checkPassword : Chaine
+Variable nbTentative : Entier
+
+DEBUT
+    
+    Ecrire("Veuillez introduire votre e-mail : ")
+    Lire(email)
+    Ecrire("Veuillez introduire votre mot de passe : ")
+    Lire(password)
+
+    nbTentative <- 3
+
+    FAIRE
+        Ecrire("Veuillez vous authentifier")
+        Ecrire("{nbTentative} tentatives restantes")
+        Ecrire("e-mail : ")
+        Lire(checkEmail)
+        Ecrire("mot de passe : ")
+        Lire(checkPassword)
+        nbTentative <- nbTentative - 1
+    TANTQUE (email != checkEmail OU password != checkPassword) ET nbTentative != 0 FINTQ
+    
+    SI email == checkEmail ET password == checkPassword ALORS
+        Ecrire("Bienvenu {email}")
+    SINON
+        Ecrire("Accès refusé")
+    FINSI
+    
+
+FIN
