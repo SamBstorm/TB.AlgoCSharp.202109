@@ -1,0 +1,63 @@
+Algorithme To-do-list
+
+Constante TAILLE = 8
+Variable tasks : Tableau de Chaine[TAILLE]
+Variable index, count, taskId : Entier
+
+DEBUT
+    count <- EncoderTaches(ref tasks, TAILLE)
+    
+    FAIRE
+        AfficherTaches(tasks, count)
+        Lire(taskId)
+        count <- SupprimerTache(taskId, ref tasks, count)
+
+    TANTQUE taskId != 9 && count > 0 FINTQ
+    
+FIN
+
+PROCEDURE AfficherTaches(tab : Tableau de Chaine, taille : Entier)
+
+Variable index : Entier
+
+DEBUT
+    POUR index DE 0 À taille-1 FAIRE
+        Ecrire("{index + 1}. {tab[index]}")
+    FINP
+    Ecrire("9. Quitter")
+    Ecrire("Quel tâche supprimer : ")
+FIN
+
+FONCTION SupprimerTache(id : Entier, ref tab : Tableau de Chaine, taille : Entier) : Entier
+
+Variable index : Entier
+
+DEBUT
+    POUR index DE id-1 À taille-1 FAIRE
+        SI index == taille - 1 ALORS
+            tab[index] <- ""
+        SINON
+            tab[index] <- tab[index+1]
+        FINSI
+    FINP
+    taille <- taille -1
+    RENVOIE taille
+FIN
+
+FONCTION EncoderTaches(ref tab : Tableau de Chaine, taille : Entier) : Entier
+
+Variable input : Chaine
+Variable count : Entier
+
+DEBUT
+    count <- 0
+    FAIRE
+        Ecrire("Encodez votre tâche n°{taille + 1} : ")
+        Lire(input)
+        SI input != "FIN" ALORS
+            tab[count] <- input
+            count <- count + 1
+        FINSI
+    TANTQUE input != "FIN" ET count < taille FINTQ
+    RENVOIE count
+FIN
